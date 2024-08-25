@@ -1,0 +1,727 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+@font-face {
+    font-family: bobblebod;
+    src: url(font/Bobblebod.ttf);
+}
+
+html{
+    font-family: "Poppins", sans-serif;
+}
+
+header{
+    position:relative;
+    width:100%;
+    height:600px;
+}
+
+header::before{
+    content: '';
+    position:absolute;
+    border-radius:0 50px 0 0;
+    width:37%;
+    height:100%;
+    right: 7%;
+    background: linear-gradient(0deg, #ffb12a, #fec140);
+    z-index:-1;
+}
+
+header nav{
+    width:85%;
+    height:70px;
+    /* border:1px solid #000; */
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+header nav .logo_ul{
+    display:flex;
+    align-items:center;
+}
+
+header nav .logo_ul img{
+    width:30px;
+}
+
+header nav .logo_ul ul{
+    display:flex;
+    align-items:center;  
+    margin-left:15px;
+} 
+
+header nav .logo_ul ul li{
+    list-style:none;
+    padding:3px 10px;
+    margin-right:10px;
+}
+
+header nav .logo_ul ul li a{
+    text-decoration:none;
+    color:black;
+    font-size:13px;
+    font-weight:600;
+    transition:0.2s linear;
+}
+
+header nav .logo_ul ul li:nth-last-child(1){
+    background: #0080006e;
+    padding:3px 10px;
+    border-radius:10px;
+}
+
+header nav .logo_ul ul li:nth-last-child(1) a{
+    color:white;
+}
+
+header nav .logo_ul ul li:nth-last-child(1) a i{
+    margin-left:5px;
+}
+
+header nav .logo_ul ul li a:hover{
+    color:rgba(0, 0, 0, 0.2)
+}
+
+header .contacts{
+    display: flex;
+    align-items:center;
+}
+
+header .contacts li{
+    display:flex;
+    align-items:center;
+    list-style:none;
+    margin-right:20px;
+    font-size:13px;
+}
+
+header .contacts li a{
+    color:white;
+    text-decoration:none;
+}
+
+header .contacts li:nth-child(2){
+    background: #fff;
+    display:flex;
+    justify-content:space-between;
+    width:90px;
+    padding:3px 10px;
+    border-radius:10px;
+}
+
+section{
+    width:80%;
+    /* border:1px solid #000; */
+    margin:0 auto;
+    margin-top:20px;
+    display: flex;
+    
+}
+
+section .content, .img_box{
+    position:relative;
+    width:40%;
+    /* border:1px solid #000; */
+    padding:10px;
+}
+
+section .img_box{
+    width:60%;
+}
+
+section .content h5{
+    display: unset;
+    padding:5px 5px;
+    background:red;
+    border-radius:10px;
+    color:white;
+}
+
+section .content h1{
+    margin-top: 10px;
+    font-size:3rem;
+    font-weight:800;
+    font-family: bobblebod;
+}
+
+section .spicy_icon{
+    margin-top:15px;
+}
+section p{
+    margin-top:15px;
+    width:300px;
+    font-size:14px;
+}
+
+section .ingredients{
+    margin-top:15px;
+    display: flex;
+    gap:10px;
+}   
+
+section .ingredients p{
+    margin-top:-1px;
+    padding:3px 0;
+    background: #00a950;
+    color:white;
+    text-align: center;
+    border-radius:50%;
+    width:30px;
+    height:30px;
+}
+
+section .order_rate{
+    margin-top:15px;
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+section .order_rate a{
+    background:#000;
+    padding:5px 10px;
+    border-radius:10px;
+    color:white;
+    cursor:pointer;
+}
+
+section .order_rate .price{
+    color:#00a950;
+}
+
+section .order_rate .price sup{
+    font-size:14px;
+    margin-left:10px;
+    color:#ffb12a;
+}
+
+section .food_slider{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 100%;
+    overflow-x: hidden;
+    margin-top:50px;
+    scroll-behavior: smooth;
+}
+
+section .food_slider::-webkit-scrollbar{
+    display: none;
+}
+
+section .food_slider img{
+    width:40px;
+    cursor:pointer;
+    opacity:0.3;
+    transition:0.2s linear;
+}
+
+section .food_slider img:nth-child(1){
+    opacity:1;
+    transform:scale(1.1);
+}
+
+section .food_slider img:hover{
+    opacity:1;
+    transform:scale(1.1);
+}
+
+section .img_box .images{
+    margin-top:50px;
+    display:flex;
+    align-items:center;
+    width: 100%;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+}
+
+section .img_box .images::-webkit-scrollbar{
+    display:none;
+}
+
+section .img_box .images img{
+    width:35%;
+    margin-right:50px;
+    filter:blur(1.4px);
+    transition: .3s linear;
+}
+
+section .img_box .images img:nth-child(1){
+    width:60%;
+    filter:blur(0px);
+}
+
+section .img_box .slide_btns{
+    display: flex;
+    justify-content: space-between;
+    position:absolute;
+    bottom:5px;
+    left:129px;
+}
+
+section .img_box .slide_btns i{
+    font-size:14px;
+    cursor:pointer;
+    margin-right:50px;
+    padding:5px;
+    background:#ff8e27;
+    /* width:50px;
+    height:50px; */
+    border-radius:50%;
+    color:white;
+}
+
+section .img_box .burder_badge{
+    position:absolute;
+    right: 20%;
+    top:10%;
+    display: flex;
+    align-items: center;
+    z-index:99;
+}
+
+section .img_box .burder_badge .badge_card{
+    width:70px;
+    height:80px;
+    background: #fff;
+    box-shadow:0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* text-align:center; */
+    margin-right:10px;
+    border-radius:5px 5px 15px 15px;
+    padding:0 15px;
+}
+
+section .img_box .burder_badge .badge_card p {
+    margin-top:0px;
+    color:grey;
+    font-size:14px;
+}
+
+section .img_box .burder_badge .badge_card h5{
+    font-size:16px;
+    color:#f01147;
+    font-weight:700;
+}
+
+.del{
+    width:100%;
+    margin:auto;
+    padding:60px 10%;
+    display: flex;
+    background: #fbf8f2;
+}
+
+.del .cont h1{
+    font-size:40px;
+    line-height:50px;
+    font-family: 'bobblebod';
+}
+
+.del .cont p{
+    font-size:14px;
+    margin:10px 0px;
+}
+
+.del .cont button{
+    background-color: #00a950;
+    color:white;
+    width:100%;
+    height:30px;
+    border:1px solid #fff;
+    border-radius:10px;
+    cursor:pointer;
+    transition: 0.2s linear;
+}
+
+.del .cont button:hover{
+    background-color: #00a94fc3;
+}
+
+.del img:nth-child(2){
+    width:290px;
+    height:300px;   
+    transform: translateX(-10px) translateY(10px);
+}
+
+.del img:nth-child(3){
+    width:290px;
+    height:320px;
+    transform: translateX(-10px) ;
+}
+
+.food_chart{
+    /* padding-top:20px; */
+    width:100%;
+    height:auto;
+}
+
+.foochart_row{
+    display: flex;
+}
+
+.foodchar_col1{
+    width:30%;
+    padding-left:20px;
+    background:#00a950;
+    color:white;
+    display: flex;
+    align-items: center;
+}
+
+.foodchar_col1 h1{
+    font-size:50px;
+    font-family: 'bobblebod';
+}
+
+.foodchar_col1 p{
+    /* width:40%; */
+    margin:10px 0;
+    font-size:14px;
+}
+
+.foodchar_col1 img{
+    height: 350px;
+}
+
+.foodchar_col1 button{
+    background-color: #000;
+    color:white;
+    padding:7px;
+    border-radius:8px;
+    border:1px solid #fff;
+    font-weight:700;
+    margin:10px 0;
+    transition:0.2s linear;
+}
+
+.foodchar_col1 button:hover{
+    background-color: white;
+    color:black;
+}
+
+.foodchar_col2{
+    overflow: hidden;
+    width:40%;
+    padding-left:20px;
+    background:#ffb12a;
+    color:white;
+    display: flex;
+    align-items: center;
+    gap:40px;
+}
+
+.foodchar_col2 h1{
+    font-size:50px;
+    font-family: 'bobblebod';
+}
+
+.foodchar_col2 p{
+    /* width:40%; */
+    margin:10px 0;
+    font-size:14px;
+}
+
+.foodchar_col2 img{
+    height: 350px;
+}
+
+.foodchar_col2 button{
+    background-color: #000;
+    color:white;
+    padding:7px;
+    border-radius:8px;
+    margin:10px 0;
+    border:1px solid #fff;
+    font-weight:700;
+    transition:0.2s linear;
+}
+
+.foodchar_col2 button:hover{
+    background-color: white;
+    color:black;
+}
+
+/*section ends*/
+
+.foodchar_col3{
+    overflow: hidden;
+    width:30%;
+    padding-left:20px;
+    background:#22c56e;
+    color:white;
+    display: flex;
+    align-items: center;
+    /* gap:40px; */
+}
+
+.foodchar_col3 h1{
+    font-size:50px;
+    font-family: 'bobblebod';
+}
+
+.foodchar_col3 p{
+    /* width:40%; */
+    margin:10px 0;
+    font-size:14px;
+}
+
+.foodchar_col3 img{
+    height: 350px;
+}
+
+.foodchar_col3 button{
+    background-color: #000;
+    color:white;
+    padding:7px;
+    border-radius:8px;
+    border:1px solid #fff;
+    margin:10px 0;
+    font-weight:700;
+    transition:0.2s linear;
+}
+
+.foodchar_col3 button:hover{
+    background-color: white;
+    color:black;
+}
+
+.foochart_row2{
+    display: flex;
+}
+
+.foochart_row2 .foodchar_col1{
+    padding-top: 30px;
+    width:45%;
+    background: blue;
+}
+
+.foochart_row2 .foodchar_col1 img{
+    width:300px;
+    height:200px;
+}
+.foochart_row2 .foodchar_col2{
+    padding-top:30px;
+    background:#cd2869;
+}
+
+.foochart_row2 .foodchar_col2 img{
+    width:250px;
+    height:250px;
+}
+
+.foochart_row2 .foodchar_col3{
+    padding-top:30px;
+    display: flex;
+    flex-direction: column;
+    align-items:center; 
+    gap:30px;   
+}
+
+.foochart_row2 .foodchar_col3 i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#ff8e27;
+    transition:0.2s linear;
+    cursor:pointer;
+}
+
+.foochart_row2 .foodchar_col3 i:hover{
+    transform:scale(1.2);
+    background:#ff8f2794;
+}
+
+.main_box{
+    background: #fbf8f2;
+    text-align:center;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.main_box h1{
+    font-size:50px;
+    font-family:'bobblebod';
+}
+.mainbx_img{    
+    width:90%;
+    height:520px;
+    background-image: url(img/food\ main.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.main_box p{
+    width:50%;
+    text-align:center;
+    color:#ff8e27;
+}
+
+.main_box button{
+    background-color: #000;
+    color:white;
+    padding:7px;
+    border-radius:8px;
+    border:1px solid #fff;
+    margin-top:20px;
+    font-weight:700;
+    cursor: pointer;
+    transition:0.2s linear;
+    margin-bottom:2rem;
+}
+
+.main_box button:hover{
+    background-color: white;
+    color:black;
+}
+
+.family_box{
+    /* margin-top:1rem; */
+    padding:40px 0px;
+    width:100%;
+    background-image:url(img/Food_big_2.png);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-color: #000;
+    color:white;
+    padding-left:2.5rem;
+}
+
+.family_box h1{
+    font-size:50px;
+    color:#00a950;
+    font-family:'bobblebod'
+}
+.family_box h2{
+    width:450px;
+    color:#b1ca34;
+    font-family:'bobblebod'
+}
+
+.family_box h3{
+    font-size:24px;
+    color:#ff8e27;
+    font-family:'bobblebod'
+}
+
+.family_box p{
+    margin:1.5rem 0;
+    font-size:14px;
+    width:400px;
+}
+
+.familybtn_box button:nth-child(1){
+    background-color: #00a950;
+    padding:10px;
+    color:white;
+    height:40px;
+    border:1px solid #fff;
+    border-radius:10px;
+    cursor:pointer;
+    transition: 0.2s linear;
+}
+
+.familybtn_box button:nth-child(1):hover{
+    background-color: #00a94fc3;
+} 
+
+.familybtn_box button:nth-child(2){
+    background-color: #000;
+    padding:10px;
+    color:white;
+    height:40px;
+    border:1px solid #fff;
+    border-radius:10px;
+    cursor:pointer;
+    transition: 0.2s linear;
+}
+
+.familybtn_box button:nth-child(2):hover{
+    background-color: #fff;
+    color:black;
+}
+
+.imp_box{
+    width:550px;
+    display: flex;
+    align-items:center;
+}
+
+.imp_box img{
+    width: 60px;
+    height:60px;
+}
+
+.imp_box h6{
+    margin-right:20px;
+    font-size: 10px;
+    color:#ff8e27;
+    font-weight:500;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-content h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-content p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.footer-content .socials {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-content .socials li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-content .socials li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.footer-content .socials li a:hover {
+    color: #ff9800;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
